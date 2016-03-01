@@ -54,6 +54,13 @@
 
  - 动手实践
 
- - 工作步骤和概要图
+   便携关于 `more` 的功能程序
 
-# <span id="log">Log</span>
+ - 工作步骤和概要图
+   
+   empty...
+
+# <span id="log">Question</span>
+2016-3-2 by wuyingqiang
+
+  - 再次理解 fgets, fputs, fgetc, fputc 的函数功能. 
