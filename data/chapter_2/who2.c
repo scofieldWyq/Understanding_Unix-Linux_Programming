@@ -69,3 +69,4 @@ void showtime(long timeval)
     printf("%12.12s", cp+4);
 }
 
+/* who2.c end */
