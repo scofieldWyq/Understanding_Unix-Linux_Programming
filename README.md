@@ -109,6 +109,12 @@
    提供了 `perror()` 来实现错误信息的显示。
  
 ### 总结
+   系统调用的文件读写操作
+   对于缓冲区重要性的了解
+   对于系统调用错误信息的使用
+   
+## Chapter 3
+
 # <span id="log">Question</span>
 2016-3-2 by wuyingqiang
 
