@@ -22,11 +22,13 @@
 ## who
    
    > 使用 open, read, close 函数实现 who
-
+    
+   这里对文件 `utmp` 的读取和格式化输出，就可以做到 `who` 的功能
 
 ## cp
    
    > 使用 open, create, read, write, close 函数实现 cp 
+  
 
 ## 缓冲区
 
