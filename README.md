@@ -119,12 +119,29 @@
 
  /* include <sys/types.h> */
  /* include <dirent.h> */
+ - opendir 打开目录
+ - readdir 读取目录
+ - closedir 关闭目录
+ 
+ /* include <sys/stat.h> */ 
+ - stat 获取文件的信息
 
- - opendir
- - readdir
- - closedir
+ /* include <pwd.h> */
+ /* include <grp.h> */
+ - getpwuid 获取用户名的ID
+ - getgrgid 获取组名的ID
 
- - struct `dirent` /* include <dirent> */
+ - struct `dirent` 目录结构 /* include <dirent> */
+
+ /* include <stdio.h> */
+ - rename 更改名字
+
+ /* include <sys/types.h> */
+ /* include <sys/stat.h> */
+ - chmod 更改文件的掩码 
+
+ /* include <unistd.h> */
+ - chown 更改文件所有者
 
 ### 编写 ls 命令 
 
