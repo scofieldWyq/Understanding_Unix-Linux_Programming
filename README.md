@@ -113,7 +113,22 @@
    对于缓冲区重要性的了解
    对于系统调用错误信息的使用
    
-## Chapter 3
+## Chapter 3 - 目录的操作
+
+### 有关函数与头文件包含和结构体
+
+ /* include <sys/types.h> */
+ /* include <dirent.h> */
+
+ - opendir
+ - readdir
+ - closedir
+
+ - struct `dirent` /* include <dirent> */
+
+### 编写 ls 命令 
+
+### 关于目录
 
 # <span id="log">Question</span>
 2016-3-2 by wuyingqiang
