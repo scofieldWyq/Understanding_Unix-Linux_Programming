@@ -61,6 +61,12 @@ void dostat(char *filename)
 void show_file_info(char *filename, struct stat *info_p)
 /*
  * display the info about filename. The info is stored in struct at *info_p
+ *
+ * change the name output width.
+ *
+ * change size of file width.
+ *
+ *
  * */
 {
   char *uid_to_name(), *ctime(), *gid_to_name(), *filemode();
@@ -71,8 +77,8 @@ void show_file_info(char *filename, struct stat *info_p)
 
   printf("%s", modestr);
   printf("%4d", (int)info_p->st_nlink);
-  printf(" %-8s", uid_to_name(info_p->st_uid));
-  printf(" %-8s", gid_to_name(info_p->st_gid));
+  printf(" %-s", uid_to_name(info_p->st_uid));
+  printf(" %-s", gid_to_name(info_p->st_gid));
   printf(" %8ld", (long)info_p->st_size);
   printf(" %.12s", 4+ctime(&info_p->st_mtime));
   printf(" %s\n", filename);
