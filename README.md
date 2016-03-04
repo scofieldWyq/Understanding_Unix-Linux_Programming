@@ -133,7 +133,16 @@
 
  - struct `dirent` 目录结构 /* include <dirent> */
 
- 
+ /* include <stdio.h> */
+ - rename 更改名字
+
+ /* include <sys/types.h> */
+ /* include <sys/stat.h> */
+ - chmod 更改文件的掩码 
+
+ /* include <unistd.h> */
+ - chown 更改文件所有者
+
 ### 编写 ls 命令 
 
 ### 关于目录
