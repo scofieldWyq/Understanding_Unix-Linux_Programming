@@ -1,15 +1,19 @@
 # Understanding Unix/Linux Progamming
 
-#Index
+## Index
  1. [intentio](#intention)
  2. [Start](#chapters)
 
-# <span id="intention">What is my intention</span>
+## <span id="intention">What is my intention</span>
  为了更加深入的学习Linux，还有参考了 `Understanding Unix/linux Programming` 的内容来完成我在里面的学习过程和代码的训练
 
-# <span id="chapters">Start to Learn</span>
+## <span id="chapters">Start to Learn</span>
 
-## chapter One - Unix 系统编程概述
+## Eexample of study
+    
+   对于学习之后的再次连手的地方，在 `exampleCode` 目录里面的文件作为学习的实践。
+
+### chapter One - Unix 系统编程概述
  - 介绍
    
  >  涉及什么是系统编程，Unix系统编程。从分析系统入手，解释如何写系统相关的程序，然后分析Unix的命令，最后就是来动手实现
@@ -60,9 +64,9 @@
    
    empty...
 
-## Chapter 2 - Unix/Linux 的文件读写和缓存
+### Chapter 2 - Unix/Linux 的文件读写和缓存
 
-### <span id="function">有关的函数以及头文件包含</span>
+ **<span id="function">有关的函数以及头文件包含</span>**
 
  - open    /* #include <fcntl.h> */
 
@@ -77,20 +81,20 @@
 
  - close   /* #include <unistd.h> */
 
-### 大概的流程
+ **大概的流程**
 
    从 `who`, `cp` 功能去使用这些[读写函数](#function)完成,接着对缓冲区的了解和使用,最后是对系统调用错误的处理。
 
-### who
+ **who**
    
    > 使用 open, read, close 函数实现 who 
 
 
-### cp
+ **cp**
    
    > 使用 open, create, read, write, close 函数实现 cp  
 
-### 缓冲区
+ **缓冲区**
 
    > 对于缓冲的使用，会节省很多次系统调用所消耗的时间。
 
@@ -102,20 +106,20 @@
 
   缓存技术会加快程序的运行效率。
 
-### 系统调用错误
+ **系统调用错误**
 
    内核通过 `errno` 这个全局变量来指明错误的类型。
 
    提供了 `perror()` 来实现错误信息的显示。
  
-### 总结
+ **总结**
    系统调用的文件读写操作
    对于缓冲区重要性的了解
    对于系统调用错误信息的使用
    
-## Chapter 3 - 目录的操作
+### Chapter 3 - 目录的操作
 
-### 有关函数与头文件包含和结构体
+ **有关函数与头文件包含和结构体**
 
  /* include <sys/types.h> */
  /* include <dirent.h> */
@@ -143,19 +147,19 @@
  /* include <unistd.h> */
  - chown 更改文件所有者
 
-### 编写 ls 命令 
+ **编写 ls 命令** 
 
-### 关于目录
+ **关于目录**
 
-## Chapter 4 - 文件与目录如何在磁盘中组织的
+### Chapter 4 - 文件与目录如何在磁盘中组织的
 
-### 问题
+ **问题**
 
   目录是一个树状的结构，在磁盘中存储。那么磁盘是如何显示为一个包含文件，属性和目录的树状结构呢？我们需要编写一个 pwd 的命令来分析它
 
   上一章，了解有关于文件属性，目录内容，用户和组的结构。这一章就需要来分析一下磁盘与文件树的映射表现。
 
-### 需要了解文件系统的内部结构
+ **需要了解文件系统的内部结构**
 
    文件系统大概的构成 |`super block`|`i-node table`| `data area`|
   
@@ -167,14 +171,19 @@
 
    `i-node` 记录了文件的属性，也有关于文件内容相应的 `data` 块。
 
-   **一切都是文件**
+ **一切都是文件**
 
    目录也属于文件，不过内容就是 `文件 `和 `i-node` 的列表集。
 
    文件之间的链接就是之间的包含，例如子目录包含父目录的指针   
-###  
-# <span id="log">Question</span>
+  
+## <span id="log">Question</span>
 2016-3-2 by wuyingqiang
 
   - 再次理解 `fgets`, `fputs`, `fgetc`, `fputc` 的函数功能. 
   - 了解 `errno`,`perror()`
+
+2016-3-9 by wuyingqiang
+
+  - 开始学习系统调用的使用和实践
+
